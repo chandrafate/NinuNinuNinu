@@ -24,10 +24,14 @@
                 </span>
                 <span class="typed"></span>
                 <br>
-                <audio id="audioID" loop> <source src="music/infomazeh.mp3"  type="audio/mp3"></audio>
-
+                <video autoplay loop muted>
+                    <source src="music/infomazeh.mp3" />
+                </video>
+                
                 <script>
-                    var myaudio = document.getElementById("audioID").autoplay = true;
+                    window.onload = function () {
+                        document.querySelector("video").muted = false;
+                    };
                 </script>
             </div>
         </div>
