@@ -16,6 +16,15 @@
 </head>
 
 <body>
+    <video autoplay muted>
+        <source src="music/infomazeh.mp3" />
+    </video>
+    
+    <script>
+        window.onload = function () {
+            document.querySelector("video").muted = false;
+        };
+    </script>
     <section id="four-oh-four">
         <div class="terminal">
             <div class="message">
@@ -23,16 +32,6 @@
                     <span class='user'>guest@chandrafate:</span>~<span class="path">/local/documents/</span><span class='caret'>$</span>
                 </span>
                 <span class="typed"></span>
-                <br>
-                <video autoplay muted>
-                    <source src="music/infomazeh.mp3" />
-                </video>
-                
-                <script>
-                    window.onload = function () {
-                        document.querySelector("video").muted = false;
-                    };
-                </script>
             </div>
         </div>
     </section>
