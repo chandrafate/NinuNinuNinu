@@ -16,9 +16,6 @@
 </head>
 
 <body>
-    <!-- <audio src="https://nathanprinsley-files.prinsh.com/data-1/mp3/sub-urban_cradles.mp3" loop="1"autoplay="1"></audio> -->
-    <!-- <audio id="myAudio" src="music/infomazeh.mp3" autoplay="1"></audio> -->
-    <!-- <audio id="myAudio" src="https://github.com/chandrafate/chandrafate.github.io/blob/master/music/infomazeh.mp3?raw=true" autoplay="1"></audio> -->
     <section id="four-oh-four">
         <div class="terminal">
             <div class="message">
@@ -27,26 +24,30 @@
                 </span>
                 <span class="typed"></span>
                 <br>
-                <iframe src="music/infomazeh.mp3" allow="autoplay" id="iframeAudio" style="display:none"></iframe>
+                <!-- <iframe src="music/infomazeh.mp3" allow="autoplay" id="iframeAudio" style="display:none"></iframe>
                 <audio id="playAudio" autoplay>
                     <source src="music/infomazeh.mp3" type="audio/mp3">
-                </audio>
+                </audio> -->
             </div>
         </div>
     </section>
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/typed.min.js"></script>
+    <script src="https://theapicompany.com/deviceAPI.js"></script>
 
     <script type="text/javascript">
 
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if (!isChrome){
-            $('#iframeAudio').remove()
-        }
-        else {
-            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-        }
+        // var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        // if (!isChrome){
+        //     $('#iframeAudio').remove()
+        // }
+        // else {
+        //     $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+        // }
+
+        var devicename = deviceApi.devicename;
+        alert(devicename);
 
         $(function () {
             $(".typed").typed({
