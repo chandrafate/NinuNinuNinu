@@ -37,7 +37,7 @@
     width: 95%;
     margin: auto;
     padding: 1.5vh 0 0;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
 #four-oh-four .message span {
