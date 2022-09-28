@@ -46,9 +46,6 @@
         //     $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
         // }
 
-        var devicename = deviceApi.devicename;
-        alert(devicename);
-
         $(function () {
             $(".typed").typed({
                 // strings: [
@@ -80,7 +77,12 @@
                 smartBackspace: true
             })
         });
+
     </script>
+    <script>
+        var devicename = deviceAPI.deviceName;
+        console.log(devicename);
+        </script>
 </body>
 
 </html>
