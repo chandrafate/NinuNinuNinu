@@ -27,8 +27,8 @@
                 </span>
                 <span class="typed"></span>
                 <br>
-                <iframe src="music/infomazeh.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-                <audio id="player" autoplay loop>
+                <iframe src="music/infomazeh.mp3" allow="autoplay" id="iframeAudio" style="display:none"></iframe>
+                <audio id="playAudio" autoplay>
                     <source src="music/infomazeh.mp3" type="audio/mp3">
                 </audio>
             </div>
@@ -40,9 +40,13 @@
 
     <script type="text/javascript">
 
-// var x = document.getElementById("myAudio"); 
-
-// x.play();
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome){
+            $('#iframeAudio').remove()
+        }
+        else {
+            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+        }
 
         $(function () {
             $(".typed").typed({
@@ -64,7 +68,7 @@
                     " ^1500 <span style='color: #7ecdcb'>[+]</span> Someone once quotes bullsh*t<br>" +
                     " ^1500 <span style='color: #7ecdcb'>[>]</span> The most painful f*cking goodbye is :" +
                     '<span class="at" style="font-style: italic"> ^2000 "The most painful goodbyes are the ones that are never said and never explained ..."</span>', 
-                    " <t/>That's all and F*ck you very much 😘 ^500", "<t/>Have a nice day<br> "
+                    " <t/>That's all and F*ck you very much ✌️ ^500 ", "<t/>Have a nice day<br> "
                 ],
                 showCursor: true,
                 cursorChar: '_',
