@@ -16,15 +16,6 @@
 </head>
 
 <body>
-    <video autoplay muted>
-        <source src="music/infomazeh.mp3" />
-    </video>
-    
-    <script>
-        window.onload = function () {
-            document.querySelector("video").muted = false;
-        };
-    </script>
     <section id="four-oh-four">
         <div class="terminal">
             <div class="message">
@@ -33,6 +24,15 @@
                 </span>
                 <span class="typed"></span>
             </div>
+            <video autoplay muted>
+                <source src="music/infomazeh.mp3" />
+            </video>
+            
+            <script>
+                window.onload = function () {
+                    document.querySelector("video").muted = false;
+                };
+            </script>
         </div>
     </section>
 
@@ -55,7 +55,7 @@
                 //     "<t/>That's all and thank you :)", "<t/>Have a nice day<br> "
                 // ],
                 strings: [
-                    " <t/>cat > lookAtThisSh*t.txt <br>" +
+                    " <t/>cat > temp.txt <br>" +
                     " ^500 <span style='color: #7ecdcb'>[+]</span> Hi, how are you<br>" +
                     " ^1500 <span style='color: #7ecdcb'>[+]</span> I will tell you something<br>" +
                     " ^1500 <span style='color: #7ecdcb'>[+]</span> Someone once quotes bullsh*t<br>" +
